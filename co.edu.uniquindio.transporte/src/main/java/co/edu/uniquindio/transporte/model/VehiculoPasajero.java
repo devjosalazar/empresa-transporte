@@ -3,7 +3,7 @@ package co.edu.uniquindio.transporte.model;
 
 import co.edu.uniquindio.transporte.services.*;
 
-public class VehiculoPasajero extends Vehiculo implements IVehiculoElectrico, IVehiculoAgua {
+public class VehiculoPasajero extends Vehiculo {
     private int numeroMaximoPasajeros;
 
     public VehiculoPasajero() {
@@ -25,15 +25,5 @@ public class VehiculoPasajero extends Vehiculo implements IVehiculoElectrico, IV
     @Override
     public void encender() {
         System.out.println("No me encendio......ayuda");
-    }
-
-    @Override
-    public void encenderEletricamente() {
-        System.out.println("Encender electricamente");
-    }
-
-    @Override
-    public void encenderPorAgua() {
-
     }
 }

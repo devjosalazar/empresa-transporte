@@ -67,4 +67,16 @@ public class EmpresaTransporte {
 
         return resultado;
     }
+
+    public String buscarPropietarioNombre(String nombre) {
+        String resultado = "";
+        for (Propietario propietario: getListaPropietarios()) {
+            if(propietario.getNombre().equalsIgnoreCase(nombre)){
+                resultado = propietario.toString();
+                break;
+            }
+        }
+
+        return resultado;
+    }
 }

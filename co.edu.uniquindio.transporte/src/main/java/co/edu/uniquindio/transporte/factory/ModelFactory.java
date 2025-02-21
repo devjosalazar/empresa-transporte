@@ -3,8 +3,9 @@ package co.edu.uniquindio.transporte.factory;
 import co.edu.uniquindio.transporte.model.EmpresaTransporte;
 import co.edu.uniquindio.transporte.model.Propietario;
 import co.edu.uniquindio.transporte.model.VehiculoCarga;
+import co.edu.uniquindio.transporte.services.IModelFactoryServices;
 
-public class ModelFactory {
+public class ModelFactory implements IModelFactoryServices {
 
     private static ModelFactory modelFactory;
     private EmpresaTransporte empresaTransporte;
@@ -46,5 +47,15 @@ public class ModelFactory {
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga1);
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga2);
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga3);
+    }
+
+    @Override
+    public String buscarVehiculoCargaPlaca(String placa) {
+        return empresaTransporte.buscarVehiculoCargaPlaca(placa);
+    }
+
+    @Override
+    public String buscarPropietarioNombre(String nombre) {
+        return empresaTransporte.buscarPropietarioNombre(nombre);
     }
 }

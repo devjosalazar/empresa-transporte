@@ -70,4 +70,14 @@ public class Propietario {
     public void setListaVehiculosAsociados(List<VehiculoCarga> listaVehiculosAsociados) {
         this.listaVehiculosAsociados = listaVehiculosAsociados;
     }
+
+    @Override
+    public String toString() {
+        return "Propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", numeroIdentificacion='" + numeroIdentificacion + '\'' +
+                ", email='" + email + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                '}';
+    }
 }
