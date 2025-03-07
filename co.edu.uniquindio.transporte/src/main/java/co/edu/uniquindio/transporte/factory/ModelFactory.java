@@ -4,6 +4,7 @@ import co.edu.uniquindio.transporte.model.EmpresaTransporte;
 import co.edu.uniquindio.transporte.model.Propietario;
 import co.edu.uniquindio.transporte.model.VehiculoCarga;
 import co.edu.uniquindio.transporte.services.IModelFactoryServices;
+import co.edu.uniquindio.transporte.services.IPropietarioServices;
 
 public class ModelFactory implements IModelFactoryServices {
 
@@ -27,8 +28,10 @@ public class ModelFactory implements IModelFactoryServices {
         empresaTransporte = new EmpresaTransporte();
         Propietario propietario1 = new Propietario();
         propietario1.setNombre("Pedro");
+        propietario1.setNumeroIdentificacion("978978798");
         Propietario propietario2 = new Propietario();
         propietario2.setNombre("Ana");
+        propietario2.setNumeroIdentificacion("234242323");
         VehiculoCarga vehiculoCarga1 = new VehiculoCarga();
         vehiculoCarga1.setPlaca("RRD098");
         vehiculoCarga1.setNumeroEjes(5);
@@ -58,4 +61,33 @@ public class ModelFactory implements IModelFactoryServices {
     public String buscarPropietarioNombre(String nombre) {
         return empresaTransporte.buscarPropietarioNombre(nombre);
     }
+
+
+    @Override
+    public boolean agregarPropietario(String nombre, String numeroIdentificacion, String email, String numeroCelular) {
+        return empresaTransporte.agregarPropietario(nombre, numeroIdentificacion, email, numeroCelular);
+    }
+
+    @Override
+    public Propietario obtenerPropietario(String numeroIdentificacion) {
+        return null;
+    }
+
+    @Override
+    public boolean eliminarPropietario(String numeroIdentificacion) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarPropietario(String nombre, String numeroIdentificacionActual, String numeroIdentificacion, String email, String numeroCelular) {
+        return false;
+    }
 }
+
+
+
+
+
+
+
+
